@@ -1,0 +1,13 @@
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+jinja2
+typing-extensions==4.11.0
+stack_data
+xgboost
+oauthlib==3.1.0,
+svm
+imblearn
+shap

@@ -1,0 +1,24 @@
+REGRESSION_DATA:
+  COLUMNS:
+    Marketing_Spend: float64
+    Product_Price: float64
+    Competitor_Price: float64
+    Region: object
+    Product_Category: object
+    Channel_Type: object
+    Festival_Week: object
+    Store_Type: object
+    Weekly_Sales: int64
+  TARGET_COLUMN:
+    name: Weekly_Sales
+
+CLASSIFICATION_DATA:
+  COLUMNS:
+    Tenure: int64
+    Monthly_Charges: float64
+    Total_Charges: float64
+    Support_Calls: int64
+    Contract_Type: int64
+    Churn: int64
+  TARGET_COLUMN:
+    name: Churn
