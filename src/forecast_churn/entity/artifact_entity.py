@@ -6,3 +6,18 @@ class DataIngestionArtifact:
     regression_test_file_path: str
     classification_train_file_path: str
     classification_test_file_path: str
+
+@dataclass
+class DataValidationArtifact:
+    regression_validation_status: bool
+    classification_validation_status: bool
+    valid_regression_train_file_path: str
+    valid_regression_test_file_path: str
+    valid_classification_train_file_path: str
+    valid_classification_test_file_path: str
+    invalid_regression_train_file_path: str
+    invalid_regression_test_file_path: str
+    invalid_classification_train_file_path: str
+    invalid_classification_test_file_path: str
+    regression_drift_report_file_path: str
+    classification_drift_report_file_path: str
