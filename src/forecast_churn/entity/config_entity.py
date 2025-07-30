@@ -68,3 +68,14 @@ class DataValidationConfig:
                                                         training_pipeline.DATA_VALIDATION_REGRESSION_DRIFT_REPORT_FILE_NAME)
         self.classification_drift_report_file_path: str = os.path.join(self.data_validation_dir, training_pipeline.DATA_VALIDATION_DRIFT_REPORT_DIR,
                                                         training_pipeline.DATA_VALIDATION_CLASSIFICATION_DRIFT_REPORT_FILE_NAME)
+        
+
+class DataTransformationConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        self.data_transformation_dir: str = os.path.join(training_pipeline_config.artifacts_dir, training_pipeline.DATA_TRANSFORMATION_DIR_NAME)
+        self.transformed_regression_train_file_path: str = os.path.join(self.data_transformation_dir,training_pipeline.REGRESSION_TRAIN_FILE_NAME.replace("csv", "npy"))
+        self.transformed_regression_test_file_path: str = os.path.join(self.data_transformation_dir,training_pipeline.REGRESSION_TEST_FILE_NAME.replace("csv", "npy"))
+        self.transformed_classification_train_file_path: str = os.path.join(self.data_transformation_dir, training_pipeline.CLASSIFICATION_TRAIN_FILE_NAME.replace("csv", "npy"))
+        self.transformed_classification_test_file_path: str = os.path.join(self.data_transformation_dir,training_pipeline.CLASSIFICATION_TEST_FILE_NAME.replace("csv", "npy"))
+        self.transformed_regression_object_file_path: str = os.path.join(self.data_transformation_dir, training_pipeline.REGRESSION_PREPROCESSING_OBJECT_FILE_NAME)
+        self.transformed_classification_object_file_path: str = os.path.join(self.data_transformation_dir, training_pipeline.CLASSIFICATION_PREPROCESSING_OBJECT_FILE_NAME)

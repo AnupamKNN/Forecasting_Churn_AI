@@ -7,6 +7,7 @@ class DataIngestionArtifact:
     classification_train_file_path: str
     classification_test_file_path: str
 
+
 @dataclass
 class DataValidationArtifact:
     regression_validation_status: bool
@@ -21,3 +22,12 @@ class DataValidationArtifact:
     invalid_classification_test_file_path: str
     regression_drift_report_file_path: str
     classification_drift_report_file_path: str
+
+@dataclass
+class DataTransformationArtifact:
+    transformed_regression_train_file_path: str
+    transformed_regression_test_file_path: str
+    transformed_classification_train_file_path: str
+    transformed_classification_test_file_path: str
+    transformed_regression_object_file_path: str
+    transformed_classification_object_file_path: str

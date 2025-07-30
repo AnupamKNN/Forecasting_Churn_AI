@@ -8,6 +8,7 @@ REGRESSION_DATA:
     - Channel_Type: object
     - Festival_Week: object
     - Store_Type: object
+  TARGET_COLUMN:
     - Weekly_Sales: int64
 
 CLASSIFICATION_DATA:
@@ -17,4 +18,5 @@ CLASSIFICATION_DATA:
     - Total_Charges: float64
     - Support_Calls: int64
     - Contract_Type: int64
+  TARGET_COLUMN:
     - Churn: int64

@@ -66,3 +66,13 @@ DATA_VALIDATION_INVALID_DIR: str = "invalid"
 DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_REGRESSION_DRIFT_REPORT_FILE_NAME = "regression_drift_report.yaml"
 DATA_VALIDATION_CLASSIFICATION_DRIFT_REPORT_FILE_NAME = "classification_drift_report.yaml"
+REGRESSION_PREPROCESSING_OBJECT_FILE_NAME = "forecast_preprocessor.pkl"
+CLASSIFICATION_PREPROCESSING_OBJECT_FILE_NAME = "churn_preprocessor.pkl"
+
+
+"""
+Data Transformation related constant start with DATA-TRANSFORMATION VAR NAME
+"""
+DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
