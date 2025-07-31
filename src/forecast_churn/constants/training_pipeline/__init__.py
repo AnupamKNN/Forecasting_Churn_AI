@@ -34,6 +34,19 @@ CLASSIFICATION_TEST_FILE_NAME: str = "test_churn.csv"
 
 SCHEMA_FILE_PATH = os.path.join("data_schema", "schema.yaml")
 
+import os
+
+# Generic directory to store all models
+SAVED_MODEL_DIR = os.path.join("saved_models")
+
+# Sub-directories
+REGRESSION_MODEL_DIR = os.path.join(SAVED_MODEL_DIR, "regression")
+CLASSIFICATION_MODEL_DIR = os.path.join(SAVED_MODEL_DIR, "classification")
+
+# File names
+REGRESSION_MODEL_FILE_NAME = "forecast_model.pkl"
+CLASSIFICATION_MODEL_FILE_NAME = "churn_model.pkl"
+
 
 
 """
@@ -76,3 +89,17 @@ Data Transformation related constant start with DATA-TRANSFORMATION VAR NAME
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+
+"""
+Model Trainer related constant start with MODEL_TRAINER VAR NAME
+"""
+
+
+MODEL_TRAINER_DIR_NAME = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR_REGRESSION = "regression_model"
+MODEL_TRAINER_TRAINED_MODEL_DIR_CLASSIFICATION = "classification_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME_REGRESSION = "regression_model.pkl"
+MODEL_TRAINER_TRAINED_MODEL_NAME_CLASSIFICATION = "classification_model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE_REGRESSION = 0.70  # e.g., R² score
+MODEL_TRAINER_EXPECTED_SCORE_CLASSIFICATION = 0.75  # e.g., F1 score or accuracy
+MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD = 0.05

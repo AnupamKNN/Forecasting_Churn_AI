@@ -79,3 +79,15 @@ class DataTransformationConfig:
         self.transformed_classification_test_file_path: str = os.path.join(self.data_transformation_dir,training_pipeline.CLASSIFICATION_TEST_FILE_NAME.replace("csv", "npy"))
         self.transformed_regression_object_file_path: str = os.path.join(self.data_transformation_dir, training_pipeline.REGRESSION_PREPROCESSING_OBJECT_FILE_NAME)
         self.transformed_classification_object_file_path: str = os.path.join(self.data_transformation_dir, training_pipeline.CLASSIFICATION_PREPROCESSING_OBJECT_FILE_NAME)
+
+
+class ModelTrainerConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        self.model_traier_dir: str = os.path.join(training_pipeline_config.artifacts_dir, training_pipeline.MODEL_TRAINER_DIR_NAME)
+        self.regression_model_trainer_file_path: str = os.path.join(self.model_traier_dir, training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR_REGRESSION, 
+                                                                    training_pipeline.MODEL_TRAINER_TRAINED_MODEL_NAME_REGRESSION)
+        self.classification_model_trainer_file_path: str = os.path.join(self.model_traier_dir, training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR_CLASSIFICATION,
+                                                                    training_pipeline.MODEL_TRAINER_TRAINED_MODEL_NAME_CLASSIFICATION)
+        self.regression_r2_score: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE_REGRESSION
+        self.classification_accuracy_score: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE_CLASSIFICATION
+        self.overfitting_underfitting_threshold: float = training_pipeline.MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD

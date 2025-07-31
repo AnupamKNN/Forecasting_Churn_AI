@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Optional
 
 @dataclass
 class DataIngestionArtifact:
@@ -31,3 +32,46 @@ class DataTransformationArtifact:
     transformed_classification_test_file_path: str
     transformed_regression_object_file_path: str
     transformed_classification_object_file_path: str
+
+
+@dataclass
+class ClassificationMetricArtifact:
+        accuracy_score: float
+        f1_score: float
+        precision_score: float
+        recall_score: float
+
+@dataclass
+class RegressionMetricArtifact:
+        mean_absolute_error: float
+        mean_squared_error: float
+        rmse: float
+        r2_score: float
+
+@dataclass
+class ModelTrainerArtifact:
+    trained_regression_model_file_path: str
+    trained_classification_model_file_path: str
+    train_regression_metric_artifact: RegressionMetricArtifact
+    test_regression_metric_artifact: RegressionMetricArtifact
+    train_classification_metric_artifact: ClassificationMetricArtifact
+    test_classification_metric_artifact: ClassificationMetricArtifact
+
+
+@dataclass
+class RegressionModelTrainerArtifact:
+    trained_model_file_path: str
+    train_metric: RegressionMetricArtifact
+    test_metric: RegressionMetricArtifact
+
+
+@dataclass
+class ClassificationModelTrainerArtifact:
+    trained_model_file_path: str
+    train_metric: ClassificationMetricArtifact
+    test_metric: ClassificationMetricArtifact
+
+@dataclass
+class TrainingArtifactsBundle:
+    regression_artifact: Optional[RegressionModelTrainerArtifact] = None
+    classification_artifact: Optional[ClassificationModelTrainerArtifact] = None
