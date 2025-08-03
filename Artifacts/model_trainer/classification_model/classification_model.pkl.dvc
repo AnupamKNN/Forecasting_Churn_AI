@@ -1,5 +1,0 @@
-outs:
-- md5: d838b0f8580a5e23ad1e282fcab56e2b
-  size: 216597
-  hash: md5
-  path: classification_model.pkl
