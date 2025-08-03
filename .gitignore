@@ -40,4 +40,11 @@ logs/
 checkpoints/
 runs/
 
-Artifacts
+# Ignore all files inside Artifacts
+Artifacts/*
+
+# But don't ignore DVC metafiles
+!Artifacts/**/*.dvc
+
+# Optionally, don't ignore directories so Git can track folder structure
+!Artifacts/**/
