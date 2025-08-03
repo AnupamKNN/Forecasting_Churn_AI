@@ -1,0 +1,27 @@
+Channel_Type:
+  drift_status: false
+  p_value: 0.9999999999809616
+Competitor_Price:
+  drift_status: false
+  p_value: 0.15421537835633614
+Festival_Week:
+  drift_status: false
+  p_value: 1.0
+Marketing_Spend:
+  drift_status: false
+  p_value: 0.36786382443003485
+Product_Category:
+  drift_status: false
+  p_value: 0.9999999848338671
+Product_Price:
+  drift_status: false
+  p_value: 0.06081003794334239
+Region:
+  drift_status: false
+  p_value: 0.7877554659439598
+Store_Type:
+  drift_status: false
+  p_value: 0.9472338393136173
+Weekly_Sales:
+  drift_status: false
+  p_value: 0.8933780344443186

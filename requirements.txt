@@ -14,3 +14,4 @@ pyaml
 dotenv
 mlflow==2.21.3
 dagshub
+dvc

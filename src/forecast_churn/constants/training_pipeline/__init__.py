@@ -79,8 +79,8 @@ DATA_VALIDATION_INVALID_DIR: str = "invalid"
 DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_REGRESSION_DRIFT_REPORT_FILE_NAME = "regression_drift_report.yaml"
 DATA_VALIDATION_CLASSIFICATION_DRIFT_REPORT_FILE_NAME = "classification_drift_report.yaml"
-REGRESSION_PREPROCESSING_OBJECT_FILE_NAME = "forecast_preprocessor.pkl"
-CLASSIFICATION_PREPROCESSING_OBJECT_FILE_NAME = "churn_preprocessor.pkl"
+REGRESSION_PREPROCESSING_OBJECT_FILE_NAME = "regression_preprocessor.pkl"
+CLASSIFICATION_PREPROCESSING_OBJECT_FILE_NAME = "classification_preprocessor.pkl"
 
 
 """

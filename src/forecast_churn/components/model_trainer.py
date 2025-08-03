@@ -28,6 +28,22 @@ import mlflow
 from dotenv import load_dotenv
 load_dotenv()
 
+# Safely fetch credentials from .env
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
+username = os.getenv("MLFLOW_TRACKING_USERNAME")
+password = os.getenv("MLFLOW_TRACKING_PASSWORD")
+
+# Ensure they exist
+if not all([tracking_uri, username, password]):
+    raise ValueError("Missing one or more MLFLOW environment variables. Please check your .env file.")
+
+# Set env vars only if present
+os.environ['MLFLOW_TRACKING_URI'] = tracking_uri
+os.environ['MLFLOW_TRACKING_USERNAME'] = username
+os.environ['MLFLOW_TRACKING_PASSWORD'] = password
+
+# Set tracking URI for MLflow
+mlflow.set_tracking_uri(tracking_uri)
 
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
