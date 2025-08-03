@@ -1,4 +1,43 @@
-sfenv
-.env
-logs
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment folders
+.env/
+sfenv/
+venv/
+.envrc
+
+# IDE/config files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+logs/
+*.log
+
+# Ignore large data and model files directly
+*.csv
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.pt
+*.onnx
+*.h5
+
+# Allow DVC and folder structure tracking
+!*.dvc
+!.gitkeep
+
+# (Optional) Ignore experiment outputs
+.experiments/
+checkpoints/
+runs/
+
 Artifacts
