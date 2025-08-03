@@ -48,3 +48,19 @@ Artifacts/*
 
 # Optionally, don't ignore directories so Git can track folder structure
 !Artifacts/**/
+
+# Ignore everything in Artifacts
+Artifacts/**
+
+# But allow these:
+!Artifacts/**/*.dvc
+!Artifacts/**/*.dvc.*
+!Artifacts/**/.gitkeep
+!Artifacts/**/
+
+# Ignore Artifacts data, allow DVC files and structure
+Artifacts/**
+!Artifacts/**/*.dvc
+!Artifacts/**/*.dvc.*
+!Artifacts/**/.gitkeep
+!Artifacts/**/
