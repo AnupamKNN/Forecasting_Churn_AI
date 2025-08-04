@@ -1,5 +1,10 @@
 import os, sys
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+
 from src.forecast_churn.exception.exception import ForecastChurnException
 from src.forecast_churn.logging.logger import logging
 
@@ -62,10 +67,18 @@ class TrainingPipeline:
         
     def run_pipeline(self):
         try:
+            logging.info("Start Data Validation")
             data_ingestion_artifact = self.start_data_ingestion()
+            logging.info(f"Data Ingestion completed and artifact: {data_ingestion_artifact}")
+            logging.info("Start Data Validation")
             data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
+            logging.info(f"Data Validation completed and artifact: {data_validation_artifact}")
+            logging.info("Start Data Transformation")
             data_transformation_artifact = self.start_data_transformation(data_validation_artifact=data_validation_artifact)
+            logging.info(f"Data Transformation completed and artifact: {data_transformation_artifact}")
+            logging.info("Start Model Trainer")
             model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
+            logging.info(f"Model Trainer completed and artifact: {model_trainer_artifact}")
             return model_trainer_artifact
         except Exception as e:
             raise ForecastChurnException(e, sys)

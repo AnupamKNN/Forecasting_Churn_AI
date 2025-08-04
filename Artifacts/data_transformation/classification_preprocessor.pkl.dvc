@@ -1,5 +1,5 @@
 outs:
-- md5: 24c679ac4aee834460b0a2ad99157d99
+- md5: b790919f742916a60290e453e0d97dab
   size: 2242
   hash: md5
   path: classification_preprocessor.pkl
